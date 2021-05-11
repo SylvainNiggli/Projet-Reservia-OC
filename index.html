@@ -2,10 +2,55 @@
 <html>
     <head>
         <meta charset="utf-8"/>
-        <link rel="stylesheet" href="style.css"/>
+        <link rel="stylesheet" href="style.css"/>       
+        <script src="https://kit.fontawesome.com/16b51e855e.js" crossorigin="anonymous"></script>
         <title>Reservia</title>
     </head>
     <body>
-        
+        <header>
+            <img src="images/logo/Reservia.svg"/>
+            <nav>
+                <ul>
+                    <li><a href="#" >Hébergements</a></li>
+                    <li><a href="#" >Activités</a></li>
+                    <li><a href="#" >S'inscrire</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section>
+            <div>
+                <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
+                <p>En plein centre ville ou en pleine nature</p>
+            </div>
+            <div>
+                <i class="fas fa-map-marker-alt"></i>
+                <form method="POST" action="search.php">
+                    <input type="search" name="search_search" placeholder="Marseille, France">
+                    <input type="button" name="btn_search" value="Rechercher">
+                </form>               
+            </div>
+            <div>
+                <h2>Filtres</h2>
+                <ul>
+                    <li><i class="fas fa-money-bill-wave"></i>économique</li>
+                    <li><i class="fas fa-child"></i>Familiale</li>
+                    <li><i class="fas fa-heart"></i>Romantique</li>
+                    <li><i class="fas fa-dog"></i>Animaux autorisés</li>
+                </ul>
+            </div>
+            <div>
+                <i class="fas fa-info"></i>
+                <p>Plus de 500 logements sont disponibles dans cette ville</p>
+            </div>
+            
+        </section>
+        <section>
+            <div>
+                <h1>Hébergement à Marseille</h1>
+            </div>
+            <div>
+                <h1>Les plus populaires</h1>
+            </div>
+        </section>
     </body>
 </html>
