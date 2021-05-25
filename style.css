@@ -73,24 +73,22 @@ nav a
     text-decoration: none;  
 }
 
-#accommodations_nav
-{
-    border-top: 4px solid #0065FC;
-}
-
 nav li:hover
 {
     border-top: 4px solid #0065FC;  
+    transition: 500ms;
 }
 
 nav li:hover a
 {
     color: #0065FC;
+    transition: 500ms;
 }
 
 #inscription_nav:hover
 {
     border-top: 4px solid #FFFFFF;
+    transition: 500ms;
 }
 
 /* ---------------- SEARCH ----------------  */
@@ -108,7 +106,8 @@ nav li:hover a
 #search_form
 {
     display: flex;
-    align-items: center;    
+    align-items: center;  
+    margin-top: 10px;  
 }
 
 #search_form i
@@ -153,6 +152,7 @@ nav li:hover a
 {
     opacity: 0.7;
     cursor: pointer;
+    transition: 500ms;
 }
 
 
@@ -160,17 +160,119 @@ nav li:hover a
 #filters
 {
     display: flex;
-    margin-top: 50px;
+    margin-top: 20px;
+    align-items: center;
 }
 
-#filters ul
+#list_filters
 {
     display: flex;
+    padding-inline-start: 0;
     list-style-type: none;
     
 }
 
-#filters li
+.filter
 {
-    margin: 0 10px 0 10px;
+    display: flex;
+    margin-left: 25px;
+    height: 50px;
+    background-color: #FFFFFF;
+    border: 3px solid #F2F2F2;
+    border-left: 0;
+    border-radius: 50px;
+    align-items: center;
+    cursor: pointer;
+}
+.filter i
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon_filter
+{
+    border-radius: 50%;
+    border: 3px solid #DEEBFF;
+    background-color: #DEEBFF;
+    color: #0065FC;
+    font-size: 1.4em;
+    width: 50px; 
+    height: 50px;     
+}
+
+.filter p
+{
+    margin: 0 10px;
+    font-size: 1.2em;
+    font-weight: 900;
+    text-transform: capitalize;
+}
+
+.filter:hover
+{
+    border: 3px solid #DEEBFF;
+    border-left: 0;
+    transition: 500ms;
+}
+
+.filter:hover .icon_filter
+{
+    background-color: #0065FC;
+    color: #DEEBFF;
+    transition: 500ms;
+}
+.filter:hover p
+{
+    color: #0065FC;
+}
+
+
+#information
+{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#info_icon
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFFFFF;
+    color: #0065FC;
+    border: 2px solid #DEEBFF;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+}
+
+#information p
+{
+    margin-left: 10px;
+}
+/* ---------------- ACCOMMODATIONS SECTION ----------------  */
+.img_accommodation
+{
+    width: 250px;
+    height: auto;
+}
+
+#accommodation_section
+{
+    display: flex;
+}
+
+.accommodation_items ul
+{
+    display: flex;
+    flex-wrap:wrap;
+    list-style-type: none;
+}
+
+.accommodation_items ul li
+{
+    margin: 5px;
 }
