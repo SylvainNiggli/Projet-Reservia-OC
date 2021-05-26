@@ -38,6 +38,12 @@ figure
 
 #content
 {
+    width: 1500px;
+    margin: auto;
+}
+
+#main
+{
     width: 1400px;
     margin: auto;
 }
@@ -481,10 +487,8 @@ nav li:hover a
 {
     list-style-type: none;
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-between;
-    height: 450px;
 }
 
 .activities_link
@@ -495,7 +499,7 @@ nav li:hover a
 
 #activities_item1
 {
-    width: 300px;
+    width: 320px;
     height: 450px;
     border-radius: 25px;
     box-shadow: 0px 5px 5px 0 rgb(0 0 0 / 10%);  
@@ -504,24 +508,30 @@ nav li:hover a
 
 #activities_item1 a figure img
 {
-    width: 300px;
+    width: 320px;
     height: 400px;
     border-radius: 25px 25px 0 0;
     object-fit: cover;
 }
-
+#activities_bloc2
+{
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 #activities_item2
 {
-    width: 300px;
+    width: 320px;
     height: 250px;
     border-radius: 25px;
     box-shadow: 0px 5px 5px 0 rgb(0 0 0 / 10%);  
-    order: 2;
+    
 }
 
 #activities_item2 a figure img
 {
-    width: 300px;
+    width: 320px;
     height: 200px;
     border-radius: 25px 25px 0 0;
     object-fit: cover;  
@@ -529,7 +539,7 @@ nav li:hover a
 
 #activities_item3
 {
-    width: 300px;
+    width: 320px;
     height: 150px;
     border-radius: 25px;
     box-shadow: 0px 5px 5px 0 rgb(0 0 0 / 10%);  
@@ -538,7 +548,7 @@ nav li:hover a
 
 #activities_item3 a figure img
 {
-    width: 300px;
+    width: 320px;
     height: 100px;
     border-radius: 25px 25px 0 0;
     object-fit: cover;
@@ -546,33 +556,40 @@ nav li:hover a
 
 #activities_item4
 {
-    width: 300px;
+    width: 320px;
     height: 450px;
     border-radius: 25px;
     box-shadow: 0px 5px 5px 0 rgb(0 0 0 / 10%);  
-    order: 4;
+    order: 3;
 }
 
 #activities_item4 a figure img
 {
-    width: 300px;
+    width: 320px;
     height: 400px;
     border-radius: 25px 25px 0 0;
     object-fit: cover;
 }
 
+#activities_bloc4
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    order: 4;
+}
+
 #activities_item5
 {
-    width: 300px;
+    width: 320px;
     height: 200px;
     border-radius: 25px;
     box-shadow: 0px 5px 5px 0 rgb(0 0 0 / 10%);  
-    order: 5;
 }
 
 #activities_item5 a figure img
 {
-    width: 300px;
+    width: 320px;
     height: 150px;
     border-radius: 25px 25px 0 0;
     object-fit: cover;
@@ -580,16 +597,15 @@ nav li:hover a
 
 #activities_item6
 {
-    width: 300px;
+    width: 320px;
     height: 200px;
     border-radius: 25px;
     box-shadow: 0px 5px 5px 0 rgb(0 0 0 / 10%);  
-    order: 6;
 }
 
 #activities_item6 a figure img
 {
-    width: 300px;
+    width: 320px;
     height: 150px;
     border-radius: 25px 25px 0 0;
     object-fit: cover;
@@ -604,4 +620,74 @@ nav li:hover a
 {
     transform: scale(1.05);
     transition: 250ms;
+}
+
+/* ---------------- FOOTER ----------------  */
+#footer_section
+{
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+    padding: 50px;
+    background-color: #F2F2F2;
+}
+
+.footer_bloc
+{
+    width: 500px;
+}
+
+.footer_list
+{
+    list-style-type: none;
+    margin-top: 20px;
+}
+
+.footer_list li
+{
+    margin-bottom: 10px;
+}
+
+.footer_link
+{
+    text-decoration: none;
+    color: #181818;
+}
+
+.footer_link:hover
+{
+    border-bottom: 2px solid #181818;
+    opacity: 0.7;
+}
+
+
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width : 321px) 
+{
+
+    /* Styles */
+    #accommodation_section
+    {
+        flex-direction: column;
+    }
+}
+
+/* Desktops and laptops ----------- */
+@media only screen and (min-width : 1224px) 
+{
+    /* Styles */
+    #accommodation_section
+    {
+        flex-direction: row;
+    }
+}
+
+/* Large screens ----------- */
+@media only screen and (min-width : 1824px) 
+{
+    /* Styles */
+    #accommodation_section
+    {
+        flex-direction: row;
+    }
 }
