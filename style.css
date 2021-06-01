@@ -38,13 +38,13 @@ figure
 
 #content
 {
-    width: 1500px;
+    width: auto;
     margin: auto;
 }
 
 #main
 {
-    width: 1400px;
+    width: 95%;
     margin: auto;
 }
 .blue_star
@@ -79,20 +79,49 @@ header
     justify-content: space-between;
 }
 
+#head_nav
+{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: auto;
+    align-items: center;
+}
 /* ---------------- LOGO ----------------  */
 
 #logo
 {  
     padding-top: 30px;
+    cursor: pointer;
+}
+
+/* ---------------- INSCRIPTION ----------------  */
+
+#inscription
+{
+    text-decoration: none;
+    padding-top: 30px;
+    text-align:right;
+}
+
+#inscription:hover
+{
+    transform: scale(1.05);
+    transition: 500ms;
 }
 
 /* ---------------- NAVIGATION ----------------  */
 nav
 {
     display: flex;
-    align-items: flex-start;
+    position: absolute;
+    justify-content: flex-end;
+    right: 150px;
+    width: 100%;
+
 }
-nav ul
+
+#menu
 {
     list-style-type: none;
     display: flex;   
@@ -101,7 +130,7 @@ nav ul
     align-items: center;
 }
 
-nav li
+#menu li
 { 
     border-top: 4px solid #FFFFFF; 
     width: 120px;
@@ -112,28 +141,22 @@ nav li
     text-align: center;
 }
 
-nav a 
+#menu li a 
 {
     font-size: 1.1em;
     color: #181818;   
     text-decoration: none;  
 }
 
-nav li:hover
+#menu li:hover
 {
     border-top: 4px solid #0065FC;  
     transition: 500ms;
 }
 
-nav li:hover a
+#menu li:hover a
 {
     color: #0065FC;
-    transition: 500ms;
-}
-
-#inscription_nav:hover
-{
-    border-top: 4px solid #FFFFFF;
     transition: 500ms;
 }
 
@@ -163,7 +186,12 @@ nav li:hover a
 
 #search_form i
 {
-    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    min-width: 45px;
+    height: 45px;
     font-size: 1.1em;
     background-color: #F2F2F2;
     border-radius: 15px 0 0 15px;
@@ -187,6 +215,10 @@ nav li:hover a
 
 #search_button
 {
+    display: none;
+}
+#research_button
+{
     height: 45px;
     padding: 0 20px 0 20px;
     font-size: 1.1em;
@@ -199,7 +231,7 @@ nav li:hover a
     border-right: 0;
 }
 
-#search_button:hover
+#research_button:hover
 {
     opacity: 0.7;
     cursor: pointer;
@@ -220,6 +252,7 @@ nav li:hover a
     display: flex;
     padding-inline-start: 0;
     list-style-type: none;
+    flex-wrap: wrap;
     
 }
 
@@ -255,7 +288,7 @@ nav li:hover a
 
 .filter p
 {
-    margin: 0 10px;
+    margin: 0 15px;
     font-size: 1.0em;
     font-weight: 900;
     text-transform: capitalize;
@@ -324,7 +357,7 @@ nav li:hover a
     border-radius: 25px; 
     padding: 40px;
     padding-bottom: 0;
-    max-width: 850px;
+    width: 70%;
 }
 #accommodation_list
 {
@@ -395,9 +428,10 @@ nav li:hover a
 .popular_items
 {
     border-radius: 25px;
-    padding: 40px;
+    padding: 3%;
     padding-bottom: 0;
     margin-left: 40px;
+    width: 30%;
 }
 
 #popular_header
@@ -449,15 +483,16 @@ nav li:hover a
 
 .popular_img
 {
-    width: 130px;
+    width: 36%;
     height: 140px;
     object-fit: cover;
+    object-position: center;
     border-radius: 20px 0 0 20px;
 }
 
 .popular_text
 {
-    padding: 10px 25px;
+    padding: 10px 20px;
 }
 
 .popular_text h2
@@ -467,7 +502,8 @@ nav li:hover a
 
 .popular_stars
 {
-    margin-top: 30px;
+    position: absolute;
+    bottom: 10px;
 }
 
 .popular_item:hover
@@ -661,26 +697,176 @@ nav li:hover a
 }
 
 
+/*-----------------------------RESPONSIVE-----------------------------*/
 /* Smartphones (landscape) ----------- */
-@media only screen and (min-width : 321px) 
+@media only screen and (min-width : 321px) and (max-width : 1224px)
 {
-
-    /* Styles */
-    #accommodation_section
+    /* ---------------- HEADER ----------------  */
+    header
     {
         flex-direction: column;
     }
+
+    /* ---------------- NAVIGATION ----------------  */
+    nav
+    {
+        position: relative;
+        right: 0;
+    }
+    #menu
+    { 
+        justify-content: space-between;
+        width: 100%;
+        height: 45px;
+        margin-top: 20px;
+    }
+
+    #menu li
+    { 
+        display: flex;
+        border-top: 0px;
+        width: 50%;
+        height: 100%;
+        padding: 0;
+        border-bottom: 4px solid #FFFFFF;
+    }
+
+    #menu li a
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+
+    #menu li:hover
+    {
+        border-top: 0px;
+        border-bottom: 4px solid #0065FC;  
+        transition: 500ms;
+    }
+
+    #menu li:hover a
+    {
+        color: #0065FC;
+        transition: 500ms;
+    }
+
+    #inscription:hover
+    {
+        border-top: 0;
+    }
+
+    /* ---------------- SEARCH ----------------  */
+    #search_section
+    {
+        margin-top: 0;
+        padding: 30px;
+    }
+
+    #search_form
+    {
+        width: inherit;
+    }
+
+    #search_form form 
+    {
+        width: 100%;
+    }
+
+    #search_location
+    {
+        width: inherit;
+    }
+    #search_button
+    {
+        display: flex;
+        align-items: center;
+        padding: 0;
+        border: 0;
+        border-radius: 15px 15px 15px 15px;
+    }
+
+    #search_button i 
+    {
+        font-size: 1.1em;
+        background-color: #0065FC;
+        border-radius: 15px 15px 15px 15px;
+        color: #FFFFFF;
+    }
+
+    #research_button
+    {
+        display: none;
+    }
+
+    /* ---------------- FILTERS ----------------  */
+    #filters
+    {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .filter
+    {
+        margin: 10px 10px 10px 0;
+    }
+
+    /* ---------------- ACCOMMODATIONS ----------------  */
+    #accommodation_section
+    {
+        margin-top: 20px;
+        flex-direction: column-reverse;
+    }
+
+    .accommodation_items
+    {
+        margin-top: 20px;
+        background-color: #FFFFFF;
+    }
+    /* ---------------- POPULAR ----------------  */
+    .popular_items
+    {
+        width: inherit;
+        margin-left: 0;
+        padding: 20px;
+        border-radius: 0;
+    }
+
+    .popular_item
+    {
+        margin-bottom: 10px;
+    }
+
+    #popular_header
+    {
+        margin: 20px 0;
+    }
+
+    /* ---------------- ACTIVITIES ----------------  */
+    #activities_list
+    {
+        flex-direction: column;
+    }
+
+    /* ---------------- FOOTER ----------------  */
+    #footer_section
+    {
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
 }
+
 
 /* Desktops and laptops ----------- */
 @media only screen and (min-width : 1224px) 
 {
-    /* Styles */
-    #accommodation_section
-    {
-        flex-direction: row;
-    }
+
 }
+
 
 /* Large screens ----------- */
 @media only screen and (min-width : 1824px) 
