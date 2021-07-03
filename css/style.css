@@ -997,7 +997,10 @@ nav
     {
         height: 150px;
     }
-
+    .activities_text h2
+    {
+        padding: 10px 20px;
+    }
     /* ---------------- FOOTER ----------------  */
     #footer_section
     {
@@ -1320,7 +1323,10 @@ nav
     {
         height: 150px;
     }
-
+    .activities_text h2
+    {
+        padding: 10px 20px;
+    }
     /* ---------------- FOOTER ----------------  */
     #footer_section
     {
